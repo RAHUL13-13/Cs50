@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+IndexPage
+{% endblock %}
+
+{% block main %}
+    <table class = "a">
+        <tr>
+            <th style="height:px;width:100px">Symbol</th>
+            <th style="height:10px;width:100px">Shares</th>
+        </tr>
+    </table>
+    <hr>
+{% for row in rows%}
+    <table class = "a">
+        <tr>
+
+            <td style="height:auto;width:100px">{{row["Symbol"]}}</td>
+            <td style="height:auto;width:100px">{{row["totalShares"]}}</td>
+
+        </tr>
+    </table>
+    <hr>
+{% endfor%}
+    {% for row in rowss%}
+    <table class = "a">
+        <tr>
+            <td style="height:5px;width:100px">CASH</td>
+
+            <td style="height:5px;width:100px">{{row["cash"]}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}

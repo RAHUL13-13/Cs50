@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+HISTORY
+{% endblock %}
+
+{% block main %}
+    <table class = "a">
+        <tr>
+            <th style="height:px;width:100px">Symbol</th>
+            <th style="height:10px;width:100px"> Name</th>
+            <th style="height:10px;width:100px">Shares</th>
+            <th style="height:10px;width:100px">price</th>
+            <th style="height:10px;width:100px">Total</th>
+        </tr>
+    </table>
+    <hr>
+    {% for row in rows%}
+    <table class = "a">
+        <tr>
+            <td style="height:auto;width:100px">{{row["Symbol"]}}</td>
+            <td style="height:auto;width:100px">{{row["Name"]}}</td>
+            <td style="height:auto;width:100px">{{row["Shares"]}}</td>
+            <td style="height:auto;width:100px">{{row["price"]}}</td>
+            <td style="height:auto;width:100px">{{row["Total"]}}</td>
+        </tr>
+    </table>
+    <hr>
+    {% endfor %}
+    {% for row in rowss%}
+    <table class = "a">
+        <tr>
+            <td style="height:5px;width:100px">CASH</td>
+            <td style="height:5px;width:100px"></td>
+            <td style="height:5px;width:100px"></td>
+            <td style="height:5px;width:100px"></td>
+            <td style="height:5px;width:100px">{{row["cash"]}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}

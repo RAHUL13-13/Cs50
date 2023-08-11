@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+register
+{% endblock %}
+
+{% block main %}
+<form action = "/quote" method = "post">
+    <br>
+    <p>
+        <input type="text" name="symbol" placeholder= "ShareName">
+    </p>
+    <br>
+        <button type="Submit">Quote</button>
+</form>
+{% endblock %}
